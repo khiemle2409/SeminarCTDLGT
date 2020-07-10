@@ -1,0 +1,41 @@
+﻿<Window x:Class="SeminarCTDLGT.Windows.PopupMessage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SeminarCTDLGT.Windows"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        Height="250" Width="380"
+        Title="Message"
+        AllowsTransparency="True"
+        BorderThickness="2"
+        BorderBrush="Gray"
+        
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}">
+    <StackPanel Margin="15" VerticalAlignment="Center">
+        <TextBlock Name="TextBlockTitle"
+                   Style="{StaticResource MaterialDesignHeadline6TextBlock}"
+                   Text="Message's Title">
+        </TextBlock>
+
+        <TextBlock Name="TextBlockContent"
+                   TextWrapping="Wrap"
+                   Style="{StaticResource MaterialDesignBody1TextBlock}"
+                   Text="This is message's content">
+        </TextBlock>
+
+        <Button Name="ButtonOk"
+                Style="{StaticResource MaterialDesignRaisedButton}"
+                Content="OK"
+                Margin="0 15 0 0" Click="ButtonOk_Click"></Button>
+    </StackPanel>
+</Window>
